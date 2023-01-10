@@ -28,23 +28,40 @@
                     </div>
                     <div class="justify-start flex flex-col">
                         <label class="text-start m-2" for="username">Room name</label>
-                        <input
-                            class="bg-white/30 outline-none p-2 px-4 rounded-lg"
-                            type="text"
-                            name="room"
-                            id="room"
-                        />
+                        <input class="bg-white/30 outline-none p-2 px-4 rounded-lg" type="text" name="room" id="room" />
                     </div>
                 </div>
                 <button class="mx-auto bg-black p-2 rounded-full my-12 px-4">Join chat room</button>
             </form>
         </div>
         <script>
+            let colors = [
+                "blue",
+                "green",
+                "red",
+                "purple",
+                "yellow",
+                "orange",
+                "cyan",
+                "fuchsia",
+                "rose",
+                "lime",
+                "violet",
+                "emerald",
+                "indigo",
+                "amber",
+                "teal",
+                "sky",
+                "gray",
+            ];
             let userform = document.querySelector("#userform");
             let username = document.querySelector("#username");
 
             userform.addEventListener("submit", (evt) => {
                 localStorage.setItem("username", username.value);
+                let color = colors[Math.floor(Math.random() * colors.length)];
+                console.log(color);
+                localStorage.color = color;
             });
             sessionStorage.setItem("yes", Date.now());
         </script>
