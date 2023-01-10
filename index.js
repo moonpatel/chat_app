@@ -24,8 +24,8 @@ app.get("/chat/:room", (req, res) => {
 
 io.on("connection", (socket) => {
     console.log("A user connected");
-    socket.on("chat", ({ type, from, value }) => {
-        socket.broadcast.emit("chat", { type, from, value });
+    socket.on("chat", ({ type, from, value, color }) => {
+        socket.broadcast.emit("chat", { type, from, value, color });
     });
 });
 
