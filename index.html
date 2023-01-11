@@ -13,25 +13,20 @@
         </style>
     </head>
     <body class="bg-gradient-to-l from-cyan-800 to-emerald-900 text-white/90 font-mono">
-        <h1 class="text-3xl md:text-6xl pt-[20vh]">Welcome to OP🔥 chat</h1>
-        <div class="my-10">
-            <form action="/chat" method="post" id="userform">
-                <div class="flex flex-col px-10 md:px-0 md:flex-row justify-center md:space-x-10 font-mono">
-                    <div class="justify-start flex flex-col">
-                        <label class="text-start m-2" for="username">Username</label>
-                        <input
-                            class="bg-white/30 outline-none p-2 px-4 rounded-lg"
-                            type="text"
-                            name="username"
-                            id="username"
-                        />
-                    </div>
-                    <div class="justify-start flex flex-col">
-                        <label class="text-start m-2" for="username">Room name</label>
-                        <input class="bg-white/30 outline-none p-2 px-4 rounded-lg" type="text" name="room" id="room" />
-                    </div>
+        <h1 class="text-3xl md:text-6xl pt-9 md:pt-[20vh]">Welcome to OP🔥 chat</h1>
+        <div class="mt-2">
+            <form class="flex flex-col items-center" action="/chat" method="post" id="userform">
+                <div class="justify-start flex flex-col">
+                    <label class="text-start m-2" for="username">Username</label>
+                    <input
+                        class="bg-white/30 outline-none p-2 px-4 rounded-lg w-64"
+                        type="text"
+                        name="username"
+                        id="username"
+                        required
+                    />
                 </div>
-                <button class="mx-auto bg-black p-2 rounded-full my-12 px-4">Join chat room</button>
+                
             </form>
         </div>
         <script>
