@@ -71,6 +71,7 @@
         <script defer>
             let u = localStorage.getItem("username");
             if (u === "null" || u === "undefined" || u === "") location.href = "../../";
+            let room = location.href.split("/");
 
             function createSendMessageBubble(message) {
                 let elem = document.createElement("li");
@@ -126,6 +127,9 @@
             let input = document.querySelector("#input");
             form.addEventListener("submit", (evt) => {
                 evt.preventDefault();
+                
+                room = room.at(-1) || room.at(-2);
+                console.log(room);
                 if (input.value) {
                     item = createSendMessageBubble(input.value);
                     messages.appendChild(item);
@@ -135,6 +139,7 @@
                         from: username,
                         value: input.value,
                         color: localStorage.getItem("color"),
+                        room,
                     });
                     input.value = "";
                 }
@@ -145,6 +150,7 @@
                 messages.appendChild(item);
                 window.scrollTo(0, document.body.scrollHeight);
             });
+            
         </script>
     </body>
 </html>

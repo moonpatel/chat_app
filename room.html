@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OP chat🔥- Rooms</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gradient-to-l from-cyan-800 to-emerald-900 text-white/90 font-mono pt-20 md:pt-32">
+        <div
+            class="flex flex-col mt-10 px-10 md:px-0 md:flex-row justify-center md:space-x-10 font-mono divide-y divide-gray-500 md:divide-y-0 md:divide-x"
+        >
+            <form action="/rooms/join" method="post" class="justify-start flex flex-col">
+                <h1 class="text-xl underline text-black font-semibold my-5">Join a room</h1>
+                <label class="text-start m-2" for="username">Room name</label>
+                <input
+                    class="bg-white/30 outline-none p-2 px-4 rounded-lg w-64"
+                    type="text"
+                    name="room"
+                    id="room"
+                    required
+                />
+                <button class="mx-auto bg-black p-2 rounded-full my-12 px-4">Join chat room</button>
+            </form>
+            <form action="/rooms/create" method="post" class="justify-start flex flex-col md:pl-10">
+                <h1 class="text-xl underline text-black font-semibold my-5">Create a room</h1>
+
+                <label class="text-start m-2" for="username">Room name</label>
+                <input
+                    class="bg-white/30 outline-none p-2 px-4 rounded-lg w-64"
+                    type="text"
+                    name="newRoom"
+                    id="newRoom"
+                    required
+                />
+                <button class="mx-auto bg-black p-2 rounded-full my-12 px-4">Create room</button>
+            </form>
+        </div>
+    </body>
+</html>
